@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, charset=utf-8" http-equiv="Content-Type">
+    <style>
+        /* CSS code for styling the website */
+        body {
+            color: black;
+			font-weight: 100;
+            background: linear-gradient(to right, #add8e6, #70B5FF); 
+        }
+		
+        .container {
+            max-width: 0 auto;
+            margin: 0 auto;
+			font-weight: 100;
+        }
+        .banner {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+			border-radius: 20px;
+			font-weight: 100;
+        }
+        .banner img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            animation: slide 6s infinite;
+			border-radius: 20px;
+			font-weight: 100;
+        }
+        .banner img:nth-child(1) {
+            animation-delay: 0s;
+			border-radius: 20px;
+			font-weight: 100;
+        }
+        .banner img:nth-child(2) {
+            animation-delay: 2s;
+			border-radius: 20px;
+			font-weight: 100;
+        }
+        .banner img:nth-child(3) {
+            animation-delay: 4s;
+			border-radius: 20px;
+			font-weight: 100;
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+                opacity: 1;
+            }
+            20% {
+                transform: translateX(-100%);
+                opacity: 1;
+            }
+            40% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            60% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            80% {
+                transform: translateX(100%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0%);
+                opacity: 1;
+            }
+        }
+        .section {
+            padding: 20px;
+			font-weight: 100;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 24px;
+			font-weight: 100;
+        }
+		.section h3 {
+            text-align: center;
+            font-size: 18px;
+			font-weight: 100;
+		}
+		
+		.section h4 {
+            text-align: center;
+            font-size: 15px;
+			font-weight: 100;
+		}
+		
+		.section span {
+			text-align: left;
+            font-size: 12px;
+			font-weight: 100;
+		}
+        .section ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+			font-weight: 100;
+        }
+        .section li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+			font-weight: 100;
+        }
+		
+        }
+        .section li span {
+            font-size: 18px;
+			font-weight: 100;
+        }
+        .section li span.vip {
+           color: white;
+           font-weight: bold; 
+           text-shadow:
+              -1px -1px #7000FF,
+              -1px +1px #7000FF,
+              +1px -1px #7000FF,
+              +1px +1px #7000FF; 
+        }
+        .section p {
+           text-align:center; 
+           font-size:18px; 
+           margin-top:20px; 
+           margin-bottom:10px;
+			font-weight: 100;
+       } 
+       .section a { 
+		   font-size: 12px;
+           display:block; 
+           width:max-content; 
+		   text-align: center;
+           margin:auto; 
+           padding:10px; 
+           border-radius:20px; /* Add rounded corners */
+           background-color:#7000FF;
+           color:white; 
+           text-decoration:none; 
+		   font-weight: 100;
+           transition: background-color 0.3s ease-in-out; /* Add transition */
+       } 
+       .section a:hover { 
+		   font-weight: 100;
+           background-color:#ff00ff; /* Change the button hover color to magenta */
+       }
+		
+		.section img{
+			border-radius: 10px;
+		}
+
+       /* CSS code for the navigation bar */
+       .navbar {
+           display:flex; 
+           justify-content:center; 
+           align-items:center; 
+		   font-weight: 100;
+       } 
+       .navbar button { 
+           width:50%; 
+           height:60px; 
+           border:none; 
+           background-color:#1E77FF;
+           color:white; 
+           font-size:18px;
+           border-radius: 20px; /* Add rounded corners */
+           transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Add transition */
+           /* Add some transparency to the buttons */
+           opacity: 0.8;
+		   font-weight: 100;
+       } 
+       .navbar button.active { 
+           background-color:#731EFF;
+           transform: scale(1.1); /* Add animation */
+		   font-display: bold;
+		   border-radius: 20px;
+		   font-weight: 100;
+       }
+
+       #news, #members, #join { display:none; } /* Hide all sections by default */
+       #news.active, #members.active, #join.active { display:block; } /* Show the active section */
+		
+    </style>
+</head>
+<body>
+    <div class="container" >
+		<marquee behavior="scroll" direction="left" >🌏"CHC" stands for Computer Hardware Club. |  “CHC”代表【电脑硬件社】。🌏</marquee>
+      <!-- Banner with multiple images -->
+      <div class="banner">
+          <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/Img5.jpg" alt="Img5">
+          <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/Img2.jpg" alt="Img2">
+          <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/Img1.jpg" alt="Img1">
+      </div>
+      <!-- Navigation bar with three sections -->
+      <div class="navbar" >
+          <button id="news-btn" class="active">About</button>
+          <button id="members-btn">Members</button>
+          <button id="join-btn">Join Us</button>
+      </div>
+      <!-- Section for geek hardware news -->
+      <div class="section active" id="news" ;>
+          <h2>🧋关于社团 About Us</h2>
+          <ul>
+			  <h3>-=|🎉Art of Hardware🧠|=-</h3>
+              <li>
+				  <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 1">
+                  <span>🌏CHC硬件社是一个专门搞计算机硬件的学生社团，我们的目标是让学生能够学习硬件知识，交流硬件技术，分享硬件经验，享受硬件艺术。我们规划有各种各样的活动，比如：<br></span>
+              </li>
+              <li>
+                  <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 2">
+                  <span>🎆我们将会请来专业人士给大家讲解硬件的基本概念、操作界面、结构组成、品牌市场等内容，让你从小白变大神。<br></span>
+              </li>
+              <li>
+                  <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 3">
+                  <span>🫧我们将会利用 IM 网络社群进行去中心化的学术和非学术融合的多媒体研讨活动，每周有不同的热门话题，你可以随时随地参与互动问答、互相探讨、展示成果。</span>
+              </li>
+			  <li>
+                  <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 4">
+                  <span>🏞️我们将会联动手工社团或应用工程社团，使用环保材料制作机箱和硬件科教模型，让你发挥创意，设计风道，构造组装，自定义材料，用科普艺术作品进行拍卖或义卖，为环保或福利事业做贡献。</span>
+              </li>
+			  <li>
+                  <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 5">
+                  <span>💫我们的社长（现任/现拟）将会免费一对一提供掌上个人终端、便携性折叠计算机、传统台式计算机的品牌、配件、搭配选购指南和意见，并且根据需求出具专业的配置单和书面意见，让你少走弯路，买到最适合你的设备。</span>
+              </li>
+			  <li>
+                  <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 6">
+                  <span>🖼️我们将会周期性地在校内范围进行计算机硬件科普实体线下海报展示，每三周一次，覆盖基础的计算机硬件科普，让非社员也能受益，我们专门设立宣传部来负责此事，保证海报的可读性和艺术性。</span>
+              </li>
+			  <h4>🌏CHC硬件社是一个有创意、有趣味、有价值的社团。我们欢迎所有对计算机硬件感兴趣的同学加入我们。无论你是初学者还是高手，你都可以在这里找到你的位置和乐趣。我们期待你的加入，一起探索硬件的世界！</h4>
+			  <h3>🎉我们的slogan是：Art of Hardware!</h3>
+			  
+          </ul>
+      </div>
+      <!-- Section for members of club -->
+      <div class="section" id="members">
+          <h2>💻成员 Members</h2>
+          <ul>
+              <li>
+                  <span class="vip">Weifeng Wang - CHC创始人、第一任社长</span>
+              </li>
+              <li>
+                  <span class="vip">Guhong Sheng - CHC第一任副社长</span>
+              </li>
+			  <li>
+                  <span>🌏虚位以待（招聘中）- CHC第一任宣传部部长</span>
+              </li>
+			  <li>
+                  <span>🌏虚位以待（招聘中）- CHC第一任超级管理员</span>
+              </li>
+			  <li>
+                  <span>🌏虚位以待（招聘中）- CHC第一任财务部部长</span>
+              </li>
+			  <li>
+                  <span>🌏虚位以待（招聘中）- 更多职位，请联系社长或副社长</span>
+              </li>
+              <li>
+                  <span><br> <br>--===🖼️我们等待你的加入！Welcome to CHC!===--</span>
+              </li>
+          </ul>
+      </div>
+      <!-- Section for join us page -->
+      <div class="section" id="join">
+          <h2>🏞️加入我们 Join Us</h2>
+          <h3>🎆我们期待你的加入，一起探索有趣美妙的硬件的世界！</h3>
+          <h3>🫧Let's make it happen.</h3>
+          <h3>🌌Let's do it together.</h3>
+          <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Ds3r0qiS-ouazsh22TBNBLTTNls622VR&authKey=hHsNxsWlKnepsbnv7235iX1x6RgXKGQymbLSYWEvV95LhQBuFXhJ4JWfd9%2Fl138k&noverify=0&group_code=314525532" target="new">现在加入<br>Join Now</a>
+      </div>
+		
+
+
+      <!-- JavaScript code -->
+      <script>
+
+        let newsBtn = document.getElementById("news-btn");
+        let membersBtn = document.getElementById("members-btn");
+        let joinBtn = document.getElementById("join-btn");
+        let news = document.getElementById("news");
+        let members = document.getElementById("members");
+        let join = document.getElementById("join");
+        newsBtn.addEventListener("click", function() {
+            newsBtn.classList.add("active");
+            membersBtn.classList.remove("active");
+            joinBtn.classList.remove("active");
+            news.classList.add("active");
+            members.classList.remove("active");
+            join.classList.remove("active");
+        });
+
+        membersBtn.addEventListener("click", function() {
+            // Make the members button and section active, and the others inactive
+            newsBtn.classList.remove("active");
+            membersBtn.classList.add("active");
+            joinBtn.classList.remove("active");
+            news.classList.remove("active");
+            members.classList.add("active");
+            join.classList.remove("active");
+        });
+
+        joinBtn.addEventListener("click", function() {
+            // Make the join button and section active, and the others inactive
+            newsBtn.classList.remove("active");
+            membersBtn.classList.remove("active");
+            joinBtn.classList.add("active");
+            news.classList.remove("active");
+            members.classList.remove("active");
+            join.classList.add("active");
+        });
+		
+        (function () {
+            var a_idx = 0;
+            window.onclick = function (event) {
+                var a = new Array("🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🎉ART", "✨OF", "🖼️HARDWARE", "🥰Jason.W👨<br>💓Loves🥰<br>✨Cindy.Y👩");
+ 
+                var heart = document.createElement("b"); 
+                heart.onselectstart = new Function('event.returnValue=false');
+ 
+                document.body.appendChild(heart).innerHTML = a[a_idx]; 
+                a_idx = (a_idx + 1) % a.length;
+                heart.style.cssText = "position: fixed;left:-100%;"; 
+ 
+                var f = 16,
+                    x = event.clientX - f / 2,
+                    y = event.clientY - f,
+                    c = randomColor(),
+                    a = 1, 
+                    s = 1.2; 
+ 
+                var timer = setInterval(function () {
+                    if (a <= 0) {
+                        document.body.removeChild(heart);
+                        clearInterval(timer);
+                    } else {
+                        heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                            c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                            s + ");";
+ 
+                        y--;
+                        a -= 0.016;
+                        s += 0.002;
+                    }
+                }, 15)
+ 
+            }
+            function randomColor() {
+                return "rgb(" + (~~(Math.random() * 50)) + "," + (~~(Math.random() * 50)) + "," + (~~(Math
+                .random() * 255)) + ")";
+ 
+            }
+        }());
+		  
+      </script>
+
+    </div>
+</body>
+</html>
