@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, charset=utf-8" http-equiv="Content-Type">
+	<title>CHC硬件社 · 硬件的艺术</title>
+	<link rel="shortcut icon" href="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" >
     <style>
         /* CSS code for styling the website */
         body {
@@ -181,6 +183,24 @@
 		   border-radius: 20px;
 		   font-weight: 100;
        }
+		
+		.bottom {
+			font-size: 10px;
+			font: small-caps;
+			text-align: center;
+			color: #999999;
+			padding-top: 30px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		
+		.bottomST {
+			font: small-caps;
+			text-align: center;
+			color: #999999;
+			padding: 0px;
+		}
 
        #news, #members, #join { display:none; } /* Hide all sections by default */
        #news.active, #members.active, #join.active { display:block; } /* Show the active section */
@@ -204,9 +224,9 @@
       </div>
       <!-- Section for geek hardware news -->
       <div class="section active" id="news" ;>
-          <h2>🧋关于社团 About Us</h2>
+          <h2>🏖️关于社团 About Us</h2>
           <ul>
-			  <h3>-=|🎉Art of Hardware🧠|=-</h3>
+			  <h3>--- 🎉Art of Hardware🧠 ---</h3>
               <li>
 				  <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 1">
                   <span>🌏CHC硬件社是一个专门搞计算机硬件的学生社团，我们的目标是让学生能够学习硬件知识，交流硬件技术，分享硬件经验，享受硬件艺术。我们规划有各种各样的活动，比如：<br></span>
@@ -217,7 +237,7 @@
               </li>
               <li>
                   <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 3">
-                  <span>🫧我们将会利用 IM 网络社群进行去中心化的学术和非学术融合的多媒体研讨活动，每周有不同的热门话题，你可以随时随地参与互动问答、互相探讨、展示成果。</span>
+                  <span>🍧我们将会利用 IM 网络社群进行去中心化的学术和非学术融合的多媒体研讨活动，每周有不同的热门话题，你可以随时随地参与互动问答、互相探讨、展示成果。</span>
               </li>
 			  <li>
                   <img src="https://raw.githubusercontent.com/Real-JasonWang/CHC_Hardware/main/Pictures/logo25px.jpg" alt="News 4">
@@ -267,12 +287,17 @@
       <div class="section" id="join">
           <h2>🏞️加入我们 Join Us</h2>
           <h3>🎆我们期待你的加入，一起探索有趣美妙的硬件的世界！</h3>
-          <h3>🫧Let's make it happen.</h3>
+          <h3>🗺️Let's make it happen.</h3>
           <h3>🌌Let's do it together.</h3>
-          <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Ds3r0qiS-ouazsh22TBNBLTTNls622VR&authKey=hHsNxsWlKnepsbnv7235iX1x6RgXKGQymbLSYWEvV95LhQBuFXhJ4JWfd9%2Fl138k&noverify=0&group_code=314525532" target="new">现在加入<br>Join Now</a>
+          <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&noverify=0&group_code=314525532" target="new">现在加入<br>Join Now</a>
       </div>
-		
-
+	</div>
+	<div class="bottom">
+			<span>Copyright © CHC硬件社</span>
+			<div class="bottomST"></div>
+			<span>A Weifeng Wang Website<br><br></span>
+		<a name="trustbadge" href="https://www.ssltrust.com.au/security-report?domain=real-jasonwang.github.io" ><img name="trustseal" alt="Trust Badges" style="border: 0;" src="https://trustlock.co/wp-content/uploads/2019/01/ssl-secure-trust-badge-free.png" width="119" height="26"></a>
+		</div>
 
       <!-- JavaScript code -->
       <script>
@@ -354,8 +379,17 @@
             }
         }());
 		  
+		  var date = null;
+		date = setTimeout(time, 1000);
+		function time() {
+			clearTimeout(date);
+			dt = new Date();
+			var y = dt.getFullYear();
+			document.querySelector(".bottomST").innerHTML = y;
+			t = setTimeout(time, 1000);
+		}
+		  
       </script>
 
-    </div>
 </body>
 </html>
